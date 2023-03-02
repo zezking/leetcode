@@ -15,21 +15,6 @@ example 3:
 
 input: nums = [3,1,2,10,1]
 Output: [3,4,6,16,17] */
-// class Solution {
-//         public int[] runningSum(int[] nums) {
-//                 int[] result;
-//                 int sum;
-//                 result = new int[nums.length];
-//                 for (int i = 0; i < nums.length; i++) {
-//                         sum = nums[i];
-//                         for (int j = 0; j < i; j++) {
-//                                 sum += nums[j];
-//                         }
-//                         result[i] = sum;
-//                 }
-//                 return result;
-//         }
-// }
 import java.util.Arrays;
 
 public class Main {
