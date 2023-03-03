@@ -32,6 +32,12 @@ public class Main {
         // return result;
         // };
 
+        public static void main(String[] args) {
+
+                int[] nums = { 3, 1, 2, 10, 1 };
+                System.out.println(Arrays.toString(runningSum(nums)));
+        }
+
         // Better solution
         static int[] runningSum(int[] nums) {
                 int[] result = new int[nums.length];
@@ -41,12 +47,6 @@ public class Main {
                         result[index] = result[index - 1] + nums[index];
                 }
                 return result;
-        }
-
-        public static void main(String[] args) {
-
-                int[] nums = { 3, 1, 2, 10, 1 };
-                System.out.println(Arrays.toString(runningSum(nums)));
         };
 
 }
