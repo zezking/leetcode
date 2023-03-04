@@ -50,17 +50,33 @@ public class Main {
                 return result;
         }
 
-        //Solution 2 
-        // static int pivotIndex2(int[] nums) {
-        //         int totalSum=0; 
-        //         int leftSum=0;
-        // }
+        // Solution 2
+        static int pivotIndex2(int[] nums) {
+                int totalSum = 0;
+                int leftSum = 0;
+
+                for (int i : nums) {
+                        totalSum += i;
+                }
+
+                for (int i = 0; i < nums.length; i++) {
+                        if (leftSum == totalSum - leftSum - nums[i]) {
+                                return i;
+                        }
+
+                        leftSum += nums[i];
+
+                }
+                return -1;
+        }
 
         public static void main(String[] args) {
                 int[] num1 = { 1, 7, 3, 6, 5, 6 };
-                int[] num2 = {1,2,3};
+                int[] num2 = { 1, 2, 3 };
                 System.out.println(pivotIndex(num1));
                 System.out.println(pivotIndex(num2));
+                System.out.println(pivotIndex2(num1));
+                System.out.println(pivotIndex2(num2));
         };
 
 }
