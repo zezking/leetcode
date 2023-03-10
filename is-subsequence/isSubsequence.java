@@ -12,13 +12,10 @@ public class Main {
                         }
 
                         pointerRight += 1;
-                       System.out.println(pointerLeft);
-                       System.out.println(pointerRight);
                 }
                 
                 return pointerLeft == leftBound;
         }
-
 
         public static void main(String[] args) {
                 String s = "abc";
