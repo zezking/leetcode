@@ -1,7 +1,6 @@
 import java.util.Map;
 import java.util.HashMap;
 import java.util.Arrays;
-
 public class Main {
         static boolean isIsomorphic(String s, String t) {
 
