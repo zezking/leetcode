@@ -5,7 +5,7 @@ public class Main {
         }
 
         // Solution 2
-        static boolean isSubsequence(String s, String t) {
+        static boolean isSubsequence2(String s, String t) {
 
         }
 
@@ -16,8 +16,8 @@ public class Main {
                 String t2 = "ahbgdc"; 
                 System.out.println(isSubsequence(s,t));
                 System.out.println(isSubsequence(s2,t2));
-                System.out.println(isSubsequence(s,t));
-                System.out.println(isSubsequence(s2,t2));
+                System.out.println(isSubsequence2(s,t));
+                System.out.println(isSubsequence2(s2,t2));
         };
 
 }
