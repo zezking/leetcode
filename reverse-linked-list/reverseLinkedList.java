@@ -8,10 +8,10 @@ public class Main {
                 ListNode curr = head;
                 ListNode prev = null;
                 while (curr != null) {
-                        ListNode nexttemp = curr.next;
+                        ListNode nextTemp = curr.next;
                         curr.next=prev;
                         prev=curr;
-                        curr=nexttemp;
+                        curr=nextTemp;
                 }
 
                 return prev;
