@@ -4,6 +4,20 @@ import java.util.function.Predicate;
 
 public class Main {
         static ListNode middleNode(ListNode head) {
+                int nodeListLength = 0;
+                ListNode curr = head;
+                ListNode result = head;
+                while (curr != null) {
+                        curr = curr.next;
+                        nodeListLength++;
+
+                }
+
+                for (int i = 0; i < nodeListLength / 2; i++) {
+                        result = result.next;
+                }
+                return result;
+
         }
 
         public static void main(String[] args) {
