@@ -20,11 +20,31 @@ public class Main {
 
         }
 
+        // Solution 2 put every node into an array and the middle index will be the
+        // middle node
+        static ListNode middleNode2(ListNode head) {
+
+                ListNode[] array = new ListNode[100];
+
+                int t = 0;
+
+                while (head != null) {
+                        array[t++] = head;
+                        head = head.next;
+                }
+
+                return array[t / 2];
+
+        }
+
         public static void main(String[] args) {
                 ListNode list1 = ListNode.createList(1, 2, 3, 4, 5);
                 ListNode list2 = ListNode.createList(1, 2, 3, 4, 5, 6);
                 System.out.println(middleNode(list1).toString());
                 System.out.println(middleNode(list2).toString());
+                System.out.println(middleNode2(list1).toString());
+                System.out.println(middleNode2(list2).toString());
+
         };
 }
 
