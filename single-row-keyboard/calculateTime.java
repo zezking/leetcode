@@ -14,12 +14,16 @@ public class Main {
 
                 String keyboard1 = "abcdefghijklmnopqrstuvwxyz", word1 = "cba";
                 String keyboard2 = "pqrstuvwxyzabcdefghijklmno", word2 = "leetcode";
-                System.out.println(calculateTime(keyboard1, word1));
-                System.out.println(calculateTime(keyboard2, word2));
+                System.out.println(calculateTime1(keyboard1, word1));
+                System.out.println(calculateTime1(keyboard2, word2));
+                System.out.println(calculateTime2(keyboard1, word1));
+                System.out.println(calculateTime2(keyboard2, word2));
         }
 
         // brute force solution
-        static int calculateTime(String keyboard, String word) {
+        // time o(n^2)
+        // space o(1)
+        static int calculateTime1(String keyboard, String word) {
                 int prev = 0;
                 int steps = 0;
                 for (int i = 0; i < word.length(); i++) {
@@ -33,4 +37,21 @@ public class Main {
                 return steps;
         };
 
+        static int calculateTime2(String keyboard, String word) {
+                int prev = 0;
+                int steps = 0;
+                int[] keyboardHashMap = new int[26];
+                // map the keyboard
+                for (int i = 0; i < keyboard.length(); i++) {
+                        keyboardHashMap[keyboard.charAt(i) - 'a'] = i;
+                }
+
+                for (char c : word.toCharArray()) {
+                        steps += Math.abs(prev - keyboardHashMap[c - 'a']);
+                        prev = keyboardHashMap[c - 'a'];
+                }
+
+                return steps;
+
+        }
 }
