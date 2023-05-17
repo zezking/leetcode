@@ -1,7 +1,7 @@
+//Categorize strings by sorted strings
+//Time complexity: n is length of the array, k is the longest string for each array, we need to traverse through the array and sorted each string so it is O(n*k*log(k))
+//Space complexity: create a Map size of n and store string in the length of k so it is O(n*k)
 function groupAnagrams(strs: string[]): string[][] {
-  if (strs.length === 1) {
-    return [strs];
-  }
   const result: string[][] = [];
   const sortedStrs = strs.map((str) => str.split("").sort().join(""));
   const strsMap = new Map<string, string[]>();
@@ -14,8 +14,6 @@ function groupAnagrams(strs: string[]): string[][] {
     }
   }
 
-  for (const value of strsMap.values()) {
-    result.push(value);
-  }
+  result.push(...strsMap.values());
   return result;
 }
