@@ -17,6 +17,7 @@ function topKFrequent(nums: number[], k: number): number[] {
 }
 
 //Bucket sort solution
+//Do not initialize nested array with fill method because it creates empty array with the same reference so when you push to one nested array, it's pushing to all of them
 function topKFrequent2(nums: number[], k: number): number[] {
   const count = new Array<number[]>(nums.length + 1);
   const group = new Map<number, number>();
