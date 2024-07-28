@@ -1,3 +1,6 @@
+// Time o(n)
+// Space o(n)
+
 class ListNode {
     val: number
     next: ListNode | null
