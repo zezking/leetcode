@@ -13,7 +13,8 @@ function twoSum(nums: number[], target: number): number[] {
 }
 
 //Two-pass HashMap solution
-//Time complexity O
+//Time complexity O(n)
+//Space complexity O(n)
 
 function twoSum2(nums: number[], target: number): number[] {
   const hashMap = new Map<number, number>();
